@@ -1,0 +1,49 @@
+[project]
+id = "ambient_third_person_character"
+name = "ambient_third_person_character"
+version = "0.0.1"
+
+
+[components]
+player_camera_ref = { type = "EntityId", name = "Player Camera ref", description = "", attributes = [ "Debuggable", ] }
+player_local_velocity = { type = "Vec3", name = "Player Local Velocity", description = "", attributes = [ "Debuggable", "Networked" ] }
+player_grounded = { type = "Bool", name = "Player Grounded", description = "", attributes = [ "Debuggable", "Networked" ] }
+player_target_speed = { type = "F32", name = "Player Target Speed", description = "", attributes = [ "Debuggable", ] }
+
+anim_character = { type = "Empty", name = "Animated Character", description = "", attributes = [ "Debuggable", ] }
+anim_velocity = { type = "Vec3", name = "Animated Velocity", description = "", attributes = [ "Debuggable", ] }
+anim_grounded = { type = "Bool", name = "Animated Grounded", description = "", attributes = [ "Debuggable", ] }
+anim_jump_layer = { type = "Vec2", name = "Animated Jump Layer Weight", description = "", attributes = [ "Debuggable", ] }
+
+player_movement_direction = { type = "Vec2", name = "Player movement direction", description = "The player's movement direction.", attributes = [
+    "Debuggable",
+] }
+player_mouse_delta_x = { type = "F32", name = "Player mouse delta X", description = "The player's mouse delta X.", attributes = [
+    "Debuggable",
+] }
+
+[concepts.player_state]
+name = "Player State"
+description = "A player's state"
+
+[concepts.player_state.components]
+player_local_velocity = [0.0, 0.0, 0.0]
+player_target_speed = 0.0
+player_grounded = false
+
+[concepts.player_character]
+name = "Player Character"
+description = "Player Character model state"
+
+[concepts.player_character.components]
+anim_velocity = [0.0, 0.0, 0.0]
+anim_grounded = false
+
+
+[messages.input]
+description = "Describes the input state of the player."
+[messages.input.fields]
+direction = { type = "Vec2", name = "Direction", description = "The movement direction of the player." }
+jump = { type = "Bool", name = "Jump", description = "True if the player wants to jump." }
+run = { type = "Bool", name = "Run", description = "True if the player wants to run." }
+
