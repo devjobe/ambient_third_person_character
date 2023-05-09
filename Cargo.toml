@@ -3,11 +3,11 @@ name = "ambient_third_person_character"
 
 edition = "2021"
 publish = false
-rust-version = {workspace = true}
-version = {workspace = true}
+rust-version = "1.67.0"
+version = "0.2.1"
 
 [dependencies]
-ambient_api = {workspace = true}
+ambient_api = { version = "0.2.1" }
 
 [[bin]]
 name = "third_person_character_client"

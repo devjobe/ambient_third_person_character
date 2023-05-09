@@ -93,6 +93,8 @@ impl AnimationAssets {
                 blend.jump,
                 blend.falling_idle,
             ],
+            &[],
+            false
         );
     }
 }
