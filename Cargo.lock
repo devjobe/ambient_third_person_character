@@ -248,13 +248,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ambient_third_person_character"
-version = "0.2.1"
-dependencies = [
- "ambient_api",
-]
-
-[[package]]
 name = "ambient_time"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -341,6 +334,13 @@ name = "bitflags"
 version = "2.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "24a6904aef64d73cf10ab17ebace7befb918b82164785cb89907993be7f83813"
+
+[[package]]
+name = "bugged_ambient_third_person_character"
+version = "0.2.1"
+dependencies = [
+ "ambient_api",
+]
 
 [[package]]
 name = "bytemuck"

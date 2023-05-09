@@ -1,5 +1,5 @@
 [package]
-name = "ambient_third_person_character"
+name = "bugged_ambient_third_person_character"
 
 edition = "2021"
 publish = false
